@@ -33,9 +33,9 @@ Vector f(const Vector& x) {  // extended derivative vector
     return f;
 }
 
-double energy (double theta, const Vector& x) {
-    return 0.5 * (L * x[2]*x[2] + g * L * theta);
-}
+//double energy(double theta, const Vector& x) {
+//    return 0.5 * (L*L * x[2]*x[2]) + g * L *(1-cos(theta));
+//}
 /*
 
 void EulerCromer (double dt) {
@@ -90,7 +90,7 @@ int main() {
             while (theta >= pi) theta -= 2 * pi;
             while (theta < -pi) theta += 2 * pi;
         }
-        dataFile << t << '\t' << theta << '\t' << omega << '\t'<< energy(double theta, const Vector& x) << '\n';
+     //   dataFile << t << '\t' << theta << '\t' << omega << '\t'<< energy(double theta, const Vector& x) << '\n';
     }
 
     cout << " Output data to file pendulum.data" << endl;
